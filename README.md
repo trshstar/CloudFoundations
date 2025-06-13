@@ -60,10 +60,10 @@ This cloud infrastructure project implements a professional-grade web hosting so
 
 ## Technical Implementation
 
-<ol>
+<ul>
     <li>Multi-tier security architecture</li>
     <li>Scalable web hosting infrastructure</li>
     <li>Optimized content delivery system</li>
     <li>Isolated network environment</li>
     <li>Role-based access control</li>
-</ol>
+</ul>

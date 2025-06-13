@@ -7,6 +7,8 @@ This cloud infrastructure project implements a professional-grade web hosting so
 !["CloudFoundations Diagram"](https://github.com/trshstar/CloudFoundations/blob/main/diagram.png)
 
 
+## Webpage:
+<img width="1264" alt="image" src="https://github.com/user-attachments/assets/4c9c306c-785c-4d50-a200-1d87d0dd70aa" />
 
 ## Key Components:
 

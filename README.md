@@ -2,43 +2,66 @@
 
 This cloud infrastructure project implements a professional-grade web hosting solution using AWS's core services. The architecture is designed to provide secure access management, efficient content delivery, and isolated networking while maintaining high availability and performance.
 
-Key Components:
+## Diagram of Amazon Web Services (AWS) Technologies:
 
-    Identity and Access Management (IAM)
-        Implements three-tier access control system
-        Admin, medium-access, and least-access user groups
-        Follows the principle of least privilege
-        Manages service-level permissions across the infrastructure
 
-    Virtual Private Cloud (VPC)
-        Custom network infrastructure with public subnet
-        Configured with Internet Gateway for external connectivity
-        Implemented security groups for access control
-        Route tables for network traffic management
 
-    Elastic Compute Cloud (EC2)
-        Hosts Apache web server
-        Deployed in public subnet
-        Configured for web content hosting
-        Secured through VPC networking
+## Key Components:
 
-    CloudFront
-        Content Delivery Network implementation
-        Optimizes content delivery speed
-        Reduces load on origin servers
-        Integrates with S3 for asset delivery
+<ol>
+    <li>
+        Identity and Access Management (IAM)
+        <ul>
+            <li>Implements three-tier access control system</li>
+            <li>Admin, medium-access, and least-access user groups</li>
+            <li>Follows the principle of least privilege</li>
+            <li>Manages service-level permissions across the infrastructure</li>
+        </ul>
+    </li>
+    <li>
+        Virtual Private Cloud (VPC)
+        <ul>
+            <li>Custom network infrastructure with public subnet</li>
+            <li>Configured with Internet Gateway for external connectivity</li>
+            <li>Implemented security groups for access control</li>
+            <li>Route tables for network traffic management</li>
+        </ul>
+    </li>
+    <li>
+        Elastic Compute Cloud (EC2)
+        <ul>
+            <li>Hosts Apache web server</li>
+            <li>Deployed in public subnet</li>
+            <li>Configured for web content hosting</li>
+            <li>Secured through VPC networking</li>
+        </ul>
+    </li>
+    <li>
+        CloudFront
+        <ul>
+            <li>Content Delivery Network implementation</li>
+            <li>Optimizes content delivery speed</li>
+            <li>Reduces load on origin servers</li>
+            <li>Integrates with S3 for asset delivery</li>
+        </ul>
+    </li>
+    <li>
+        Simple Storage Service (S3)
+        <ul>
+            <li>Stores static assets and images</li>
+            <li>Integrated with CloudFront for content delivery</li>
+            <li>Secured through IAM permissions</li>
+            <li>Provides scalable storage solution</li>
+        </ul>
+    </li>
+</ol>
 
-    Simple Storage Service (S3)
-        Stores static assets and images
-        Integrated with CloudFront for content delivery
-        Secured through IAM permissions
-        Provides scalable storage solution
+## Technical Implementation
 
-Technical Implementation
-
-    Multi-tier security architecture
-    Scalable web hosting infrastructure
-    Optimized content delivery system
-    Isolated network environment
-    Role-based access control
-
+<ol>
+    <li>Multi-tier security architecture</li>
+    <li>Scalable web hosting infrastructure</li>
+    <li>Optimized content delivery system</li>
+    <li>Isolated network environment</li>
+    <li>Role-based access control</li>
+</ol>

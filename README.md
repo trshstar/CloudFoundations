@@ -4,6 +4,8 @@ This cloud infrastructure project implements a professional-grade web hosting so
 
 ## Diagram of Amazon Web Services (AWS) Technologies:
 
+!["CloudFoundations Diagram"](https://github.com/trshstar/CloudFoundations/blob/main/diagram.png)
+
 
 
 ## Key Components:

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Foundations Project</title>
+    <link rel="stylesheet" href="Cloud%20Foundations%20Project_files/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+	    <img src="Cloud%20Foundations%20Project_files/AWSS.svg" alt="AWS logo" width="200" class="aws-logo">
+	    <h1 class="cloud-foundations-text">Cloud Foundations: I Eat Very Crunchy Seaweeds</h1>	
+	</div>
+    </header>
+    <div class="text-block">
+        <p>A web hosting architecture of core AWS services where:
+	   IAM manages service permissions,
+	   EC2 hosts the Apache web server,
+	   VPC provides network isolation and connectivity,
+	   CloudFront delivers faster content,
+	   and S3 stores assets such as images.
+	   </p>
+    </div>
+    <div id="workflow" class="image-wrapper">
+        <h2>Project Workflow</h2>
+        <img src="Cloud%20Foundations%20Project_files/diagram.png" alt="Project diagram">
+    </div>
+    <section id="services" class="section">
+        
+	<h2>AWS Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+		<h3>IAM</h3>
+	        <ul>
+		    <li>Manages user credentials</li>
+	            <li>Provides permissions and access to EC2, S3, CloudFront services</li>
+		    <li>Test - Assigned to the admin group with AdministratorAccess to
+ have control over all the services in the console and act as the root</li>
+		    <li>J-Test - Assigned to the medium-access group with AmazonEC2InstanceConnect and AmazonEC2FullAccess to ensure the minimal
+			 privilege needed to complete the job. Ex: launch a EC2 instance, SSH connection to the EC2 instance </li>
+		    <li>K-Test - Assigned to the least-access group with AmazonEC2ReadOnlyAccess to grant access to view the EC2 resources.
+			 The user cannot perform any actions like launch, terminate, or modify instances. No ssh connection to the instance as well.</li>	
+               </ul>
+		<img class="aws-console-sc" src="Cloud%20Foundations%20Project_files/IAM1.png" alt="IAM screenshot" width="200" height="auto"> 
+	    </div>
+            <div class="service-card">
+		<h3>VPC</h3>
+	        <ul>	
+                    <li>It's like a house - private space</li>
+                    <li>The public subnet is like a living room (private would be like the bedrooms)</li>
+                    <li>I place my EC2 instance in the living room like a TV</li>           
+                   <li>My security groups are like the house rules about what can they do or who can enter</li>  
+                   <li>I connect to internet via Internet Gateway which is my front door connecting to the street</li>               
+                   <li>Route tables is like the hallway directs the living room to the front door</li>                    
+                </ul>
+              <img class="aws-console-sc" src="Cloud%20Foundations%20Project_files/RmapVPC.png" alt="VPC Resource Map" width="200" height="auto">
+	    </div>
+            <div class="service-card">
+		<h3>EC2</h3>
+                <ul>	
+                    <li>Runs the Apache server and host the HTML content</li>           
+                    <li>Located within VPC subnet</li>
+                    <li>Accessible through VPC’s networking</li>
+                </ul>
+	       <img class="aws-console-sc" src="Cloud%20Foundations%20Project_files/EC2.png" alt="EC2 screenshot" width="200" height="auto">		
+            </div>
+            <div class="service-card">
+	        <h3>CloudFront</h3>
+                <ul>	   
+                    <li>Content delivery network</li>
+                    <li>Pulls contents from S3 bucket and provides fast content delivery</li>
+                    <li>Reduces load on EC2</li>
+                </ul>
+	       <img src="Cloud%20Foundations%20Project_files/cfront.png" alt="CloudFront screenshot" width="200" height="auto">
+            </div>
+	    <div class="service-card">
+	        <h3>S3</h3>
+	        <ul> 
+                    <li>Stores images and hosts the images</li>        
+                    <li>Accessible though CloudFront</li>
+                    <li>IAM plays a role here to provide permissions to users to have access in this service</li>
+               </ul>
+	       <img class="aws-console-sc" src="Cloud%20Foundations%20Project_files/s3b.png" alt="S3 screenshot" width="200" height="auto">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Kevin Bariya, Jobe Ondijo, and Channing Tu</p>
+    </footer>
+   <!--
+    <script>
+        document.querySelectorAll(".service-card").forEach(service => {
+            service.addEventListener('click', () => {
+               service.classList.toggle('expanded');
+
+               const ul = service.querySelector('ul');
+ 	       const img = service.querySelector('img');
+               
+ 	       if (service.classList.contains('expanded')) {
+ 	           ul.style.maxHeight = ul.scrollHeight + "px";
+	       } else {
+	  	 ul.style.maxHeight = "0";
+ 		 img.style.maxHeight = "0";
+		}
+	    });
+        });
+    </script>
+    -->
+
+
+</body></html>
